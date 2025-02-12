@@ -10,6 +10,7 @@ function App() {
   const [agrandar, setAgrandar] = useState(45)
 
 
+
   const [valueSi, setValueSi] = useState(false)
 
   let random = [{
@@ -72,6 +73,9 @@ function App() {
   const randomResponse = () => {
     let index = Math.floor(Math.random() * 11);
     console.log(random[index])
+    if (agrandar <= 500) {
+      setAgrandar(agrandar + 10)
+    }
     setRandomValor(random[index]);
   }
 
